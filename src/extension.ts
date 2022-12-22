@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function getWebviewContent() {
-  const email = vscode.window.activeTextEditor?.document.getText()
+  const email = vscode.window.activeTextEditor?.document.getText();
 
   const { code } = babel.transform(email, {
     plugins: ['jsx-to-html/babel-plugin'],
